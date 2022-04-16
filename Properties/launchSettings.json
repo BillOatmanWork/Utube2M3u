@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Utube2M3u": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Stuff\\Utube2M3u\\list.txt C:\\Stuff\\Utube2M3u\\Coachella.m3u"
+    }
+  }
+}
