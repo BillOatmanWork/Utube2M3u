@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 
 namespace Utube2M3u
 {
@@ -88,9 +86,8 @@ namespace Utube2M3u
 
         private void DisplayHelp()
         {
-            Console.WriteLine("Parameters: (Case Insensitive)");
-            Console.WriteLine("\tUser = Jarvis user name.");
-            Console.WriteLine("\tPass = Jarvis password.");
+            Console.WriteLine("Utube2M3u input_file ourput_m3u_file");
+            Console.WriteLine("\tinput file format: channel|CUID (optional)|group|logo  (optional)|url");
             Console.WriteLine("");
             Console.WriteLine("");
 
