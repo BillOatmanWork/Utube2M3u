@@ -12,8 +12,8 @@ namespace Utube2M3u
 
         private void RealMain(string[] args)
         {
-            Console.WriteLine("Utube2M3u version " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version);
-            Console.WriteLine("");
+            ConsoleWithLog("Utube2M3u version " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version);
+            ConsoleWithLog("");
 
             if (args.Length != 2)
             {
@@ -24,8 +24,8 @@ namespace Utube2M3u
             string inFile = args[0];
             string outFile = args[1];
 
-            Console.WriteLine($"Input file: {inFile}   Output file: {outFile}");
-            Console.WriteLine("");
+            ConsoleWithLog($"Input file: {inFile}   Output file: {outFile}");
+            ConsoleWithLog("");
 
             StringBuilder m3uLines = new StringBuilder();
             string lineSave = string.Empty;
@@ -38,9 +38,9 @@ namespace Utube2M3u
 
                     if (parts.Length != 5)
                     {
-                        Console.WriteLine("Line format incorrect.");
-                        Console.WriteLine(line);
-                        Console.WriteLine("");
+                        ConsoleWithLog("Line format incorrect.");
+                        ConsoleWithLog(line);
+                        ConsoleWithLog("");
 
                         continue;
                     }
@@ -78,9 +78,19 @@ namespace Utube2M3u
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Exception: {ex.Message}.");
-                Console.WriteLine(lineSave);
-                Console.WriteLine("");
+                ConsoleWithLog($"Exception: {ex.Message}.");
+                ConsoleWithLog(lineSave);
+                ConsoleWithLog("");
+            }
+        }
+
+        public static void ConsoleWithLog(string text)
+        {
+            Console.WriteLine(text);
+
+            using (StreamWriter file = File.AppendText("Utube2M3u.log"))
+            {
+                file.Write(text + Environment.NewLine);
             }
         }
 
