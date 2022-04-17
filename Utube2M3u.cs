@@ -82,6 +82,8 @@ namespace Utube2M3u
                 ConsoleWithLog(lineSave);
                 ConsoleWithLog("");
             }
+
+            Console.WriteLine("Utube2M3u finished.");
         }
 
         public static void ConsoleWithLog(string text)
