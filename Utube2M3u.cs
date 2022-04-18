@@ -12,6 +12,8 @@ namespace Utube2M3u
 
         private void RealMain(string[] args)
         {
+            File.Delete("Utube2M3u.log");
+
             ConsoleWithLog("Utube2M3u version " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version);
             ConsoleWithLog("");
 
