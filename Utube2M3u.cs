@@ -67,9 +67,14 @@ namespace Utube2M3u
 
                     m3uLines.AppendLine($" group-title=\"{parts[2]}\",{parts[0]}");
 
+                    string url = "http://dummylink.tv/NoVideo.m3u8";
                     int endIndex = content.IndexOf(".m3u8", 0);
-                    int startIndex = content.LastIndexOf("https://", endIndex);
-                    string url = content.SubstringFromXToY(startIndex, endIndex + 5);
+                    if (endIndex > 0)
+                    {
+                        int startIndex = content.LastIndexOf("https://", endIndex);
+                        url = content.SubstringFromXToY(startIndex, endIndex + 5);
+                    }
+
                     m3uLines.AppendLine(url);
                 }
 
