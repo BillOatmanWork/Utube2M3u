@@ -8,3 +8,5 @@ CUID = (Optional) Channel Unique Identifier.  Used by some m3u editors to recogn
 group = Group name the channel belongs to. <br />
 logo = (Optional) Icon to display in the guide. <br />
 url = The YouTube URL. <br />
+<br />
+The windows bat files build single file executables for various operating systems. <br />
