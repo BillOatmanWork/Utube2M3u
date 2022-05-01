@@ -106,7 +106,7 @@ namespace Utube2M3u
         private void DisplayHelp()
         {
             Console.WriteLine("Utube2M3u input_file ourput_m3u_file");
-            Console.WriteLine("\tinput file format: channel|CUID (optional)|group|logo  (optional)|url");
+            Console.WriteLine("\tinput file format: channel|CUID (optional)|group|logo (optional)|url");
             Console.WriteLine("");
             Console.WriteLine("");
 
